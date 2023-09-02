@@ -6,6 +6,9 @@ This repository focuses on the development and implementation of an Automatic Em
 
 In the Automatic Emergency Braking System project, I delved deep into the realm of safety-critical systems, specifically targeting the prevention of high-speed vehicular collisions. Using ROS 2 and its associated messaging protocols, I conceptualized and executed an autonomous braking mechanism for a simulated race car, grounded in the principles of Instantaneous Time to Collision (iTTC).
 
+![image](https://github.com/Saibernard/Autonomous-Race-Cars-Automatic-Emergency-Braking-System-ROS2-based--using-iTTC/assets/112599512/87e1f661-19e8-43c5-b638-fdbee589059f)
+
+
 ## Key Components and Features
 
 - **Deep Dive into LaserScan Message:** The foundational component of this project revolved around the LaserScan message. My focus was particularly drawn towards the `ranges` field, which constituted an array of range measurements. Arranged radially based on LiDAR readings, these measurements became instrumental in driving the iTTC calculations.
@@ -22,6 +25,10 @@ In this formula, `r` stands for the instantaneous range measurements extracted f
 - **Design of the Automatic Emergency Braking Node:** One of the project's cornerstones was the creation of a dedicated ROS 2 node. This node was set up to subscribe to both LaserScan and Odometry messages, analyzing real-time LaserScan data. Should a potential collision be detected, the node would then initiate an automatic brake by publishing an AckermannDriveStamped message, setting the speed field to 0.0 m/s.
 
 - **Simulation and Real-world Testing:** To validate the efficacy of the braking system, I incorporated the `kb_teleop` parameter in `sim.yaml`. This allowed for keyboard-driven control of the simulated car. Throughout the simulation, I meticulously navigated the car through a variety of scenarios, such as driving through hallways and heading directly towards walls. These tests confirmed the system's robustness, with the car halting exclusively when a collision was imminent, and otherwise navigating seamlessly.
+
+![image](https://github.com/Saibernard/Autonomous-Race-Cars-Automatic-Emergency-Braking-System-ROS2-based--using-iTTC/assets/112599512/eca2b418-83e9-48a0-9fcc-8c57b767f27f)
+
+![image](https://github.com/Saibernard/Autonomous-Race-Cars-Automatic-Emergency-Braking-System-ROS2-based--using-iTTC/assets/112599512/0965152c-2ea8-4a64-998d-32bad469a590)
 
 ## Technologies and Tools
 
